@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View, Button, ScrollView } from 'react-native';
 
 class TodoScreen extends React.Component {
 
@@ -9,33 +9,35 @@ class TodoScreen extends React.Component {
 
     render() { 
         return (
-            <View style={{flex: 1, flexDirection: 'column'}}>
-                <View 
-                    style={{
-                        width: 50, 
-                        height: 50, 
-                        backgroundColor: 'powderblue'
-                    }} 
-                />
-            <View 
-                style={{
-                        width: 100, 
-                        height: 100, 
-                        backgroundColor: 'skyblue'
-                    }} 
-            />
+            <ScrollView>
+                <View style={styles.container1} />
+                <View style={styles.container2} />
+                <View style={styles.container3} />
 
-            <View 
-                style={{
-                    width: 150, 
-                    height: 150, 
-                    backgroundColor: 'steelblue'
-                }} 
-            />
-          </View>
+            </ScrollView>
+            
+
+
             );
     }
     
 }
 
+const styles = StyleSheet.create({
+container1: {
+    padding: 100, 
+    backgroundColor: 'red'
+    },
+
+container2: {
+    padding: 100, 
+    backgroundColor: 'yellow'
+    },
+
+container3: {
+    padding: 100, 
+    backgroundColor: 'orange'
+        },            
+
+})
 export default TodoScreen; 
