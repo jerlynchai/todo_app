@@ -16,7 +16,7 @@ class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-      <Header textIwant={'byebye'} />
+      <Header textIwant={'MY FIRST APP'} />
 
       {/* <Header textIwant={'Hello World'} /> */}
       <View style={{ padding: 10, margin: 10, backgroundColor: 'white' }} />
@@ -32,12 +32,12 @@ class App extends React.Component {
         <Text style={styles.bigblue}>Jerlyn</Text>
         <View style={{ margin: 5}}/>
         <Button 
-        title="Todo"
+        title="List"
          onPress={() => this.props.navigation.navigate('TodoScreen')}
         />
 
         <Button 
-        title="Flexbox"
+        title="About"
          onPress={() => this.props.navigation.navigate('FlexboxScreen')}
         />
       </View>
