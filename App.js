@@ -5,6 +5,7 @@ import { Avatar } from 'react-native-elements';
 import { createStackNavigator, createAppContainer } from "react-navigation";
 import Todo from "./screen/Todo"
 import Flexbox from "./screen/Flexbox"
+import FinalProject from "./screen/FinalProject"
 
 
 class App extends React.Component {
@@ -40,6 +41,11 @@ class App extends React.Component {
         title="About"
          onPress={() => this.props.navigation.navigate('FlexboxScreen')}
         />
+
+        <Button 
+        title="Final Project"
+         onPress={() => this.props.navigation.navigate('FinalProjectScreen')}
+        />
       </View>
     );
   }
@@ -48,7 +54,8 @@ class App extends React.Component {
 const AppNavigator = createStackNavigator({
   Home: App,
     TodoScreen: Todo,
-    FlexboxScreen: Flexbox,    
+    FlexboxScreen: Flexbox, 
+    FinalProjectScreen: FinalProject,   
 });
 
 const AppContainer = createAppContainer (AppNavigator);
